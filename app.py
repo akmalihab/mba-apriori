@@ -9,7 +9,6 @@ from PIL import Image
 # Page config
 st.set_page_config(
     page_title="Market Basket Analysis",
-    page_icon="🛒",
     layout="wide"
 )
 
