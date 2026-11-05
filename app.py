@@ -6,7 +6,6 @@ import pickle
 # Page config
 st.set_page_config(
     page_title="Market Basket Analysis",
-    page_icon="🛒",
     layout="wide"
 )
 
@@ -104,7 +103,7 @@ if selected_items:
         )
         
         # Metrics explanation in expander
-        with st.expander("📚 Penjelasan Metrics Association Rules", expanded=False):
+        with st.expander("Penjelasan Metrics Association Rules", expanded=False):
             st.markdown("### 1. Support")
             st.write("**Definisi:** Proporsi transaksi yang mengandung itemset tertentu")
             st.latex(r"\text{Support}(A \rightarrow B) = \frac{\text{Count}(A \cap B)}{\text{Total Transactions}}")
@@ -134,7 +133,7 @@ if selected_items:
             st.write("**Contoh:** Lift(Coke → Sandwich) = 3.71 → customer yang beli Coke 3.71x lebih mungkin beli Sandwich")
             
             st.markdown("---")
-            st.info("💡 **Best Practice:** Gunakan Lift untuk prioritas recommendations (Lift > 1.5 = asosiasi kuat)")
+            st.info("**Best Practice:** Gunakan Lift untuk prioritas recommendations (Lift > 1.5 = asosiasi kuat)")
         
     else:
         st.warning("Tidak ada rekomendasi untuk kombinasi item ini. Coba tambah atau ubah item lain.")
